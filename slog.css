@@ -46,6 +46,7 @@ nav a {
     color: black;
     font-weight: 700;
     font-size: 1.2em;
+    transition: all 0.5s;
 }
 
 nav a:hover {
@@ -58,6 +59,11 @@ nav a:hover {
     border-radius: 1.5625em; /* 25px */
     color: white;
     text-decoration: none;
+    transition: all 0.5s;
+}
+
+.kontakt-gumb:hover {
+    background-color: black;
 }
 
 .hero {
@@ -88,12 +94,12 @@ nav a:hover {
 
 .hero-vsebina h1 {
     font-size: 4em; /* 64px */
-    margin: 1.25em 0; /* 20px */
 }
 
 .hero-opis {
     max-width: 31.25em; /* 500px */
     margin-bottom: 1.875em; /* 30px */
+    margin-top: 0.5em;
 }
 
 .hero-gumbi {
@@ -107,6 +113,12 @@ nav a:hover {
     border-radius: 1.5625em; /* 25px */
     color: white;
     text-decoration: none;
+    transition: all 0.5s
+}
+
+.gumb-primarni:hover, .gumb-sekundarni:hover
+{
+    background-color: black;
 }
 
 .gumb-sekundarni {
@@ -115,6 +127,7 @@ nav a:hover {
     border-radius: 1.5625em; /* 25px */
     color: white;
     text-decoration: none;
+    transition: all 0.5s
 }
 
 .sekcija {
@@ -139,6 +152,12 @@ nav a:hover {
     border-radius: 0.625em; /* 10px */
     text-align: center;
     box-shadow: 0 0.625em 1.5625em rgba(0,0,0,0.05); /* 10px 25px */
+    transition: all 0.5s;
+}
+
+.kartica:hover {
+    transform: translateY(-0.5em) scale(1.05); /* rahlo dvigne in poveča kartico */
+    box-shadow: 0 1.25em 3.125em rgba(0,0,0,0.15); /* močnejša senca */
 }
 
 .kartica i {
@@ -155,6 +174,7 @@ nav a:hover {
 
 .cta p {
     margin: 1.25em 0; /* 20px */
+    margin-bottom: 2em;
 }
 
 .footer {
@@ -179,7 +199,20 @@ nav a:hover {
 }
 
 .footer-bottom {
+    margin-top: 2em;
+    max-width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
     text-align: center;
-    margin-top: 2.5em; /* 40px */
-    opacity: 0.6;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+    border-top: 0.1em white solid;
+}
+
+.footer-bottom a, .footer-bottom p
+{
+    margin-top: 0.5em;
+    color: white;
 }
