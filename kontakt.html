@@ -85,12 +85,12 @@
 <section class="sekcija kontakt-fullvh" id="kontakt">
   <div class="container">
     <h2 class="naslov-sredina">Pošljite sporočilo</h2>
-    <form action="https://formspree.io/f/mgeqrobn" method="POST" class="kontakt-forma-modern">
+    <form action="kontakt_send.php" method="POST" class="kontakt-forma-modern">
       <div class="form-grid-modern">
-        <input type="text" name="ime" placeholder="Vaše ime" required>
-        <input type="email" name="email" placeholder="Vaš e-mail" required>
-        <input type="text" name="telefon" placeholder="Telefon">
-        <input type="text" name="naslov" placeholder="Naslov">
+        <input type="text" name="ime" placeholder="Ime in Priimek" required>
+        <input type="email" name="email" placeholder="E-mail naslov" required>
+        <input type="text" name="telefon" placeholder="Telefon" required>
+        <input type="text" name="naslov" placeholder="Naslov" required>
       </div>
       <textarea name="sporocilo" rows="6" placeholder="Vaše sporočilo" required></textarea>
       <!-- Gumb v obrazcu -->
