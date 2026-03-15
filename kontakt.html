@@ -2,63 +2,141 @@
 <html lang="sl">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Kontakt</title>
+<title>Kontakt - Lesni center Gojzd</title>
 
 <link rel="stylesheet" href="slog.css">
-
-<link rel="stylesheet"
-href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<header>
-<div class="container navbar">
-
-<div class="logo">Lesni center Gojzd</div>
-
-<nav>
-<a href="index.html">Domov</a>
-<a href="onas.html">O nas</a>
-<a href="izdelki.html">Izdelki</a>
-<a href="kontakt.html">Kontakt</a>
-</nav>
-
-</div>
+<header class="glava">
+  <div class="navigacija">
+    <div class="logo">
+      <img src="Images/logo.png" alt="Logo">
+    </div>
+    <nav>
+      <a href="index.html">Domov</a>
+      <a href="onas.html">O nas</a>
+      <a href="izdelki.html">Izdelki</a>
+      <a href="kontakt.html">Kontakt</a>
+    </nav>
+    <a class="kontakt-gumb" href="kontakt.html#kontakt">
+      <i class="fa-solid fa-envelope"></i>
+      Naroči izdelek
+    </a>
+  </div>
 </header>
 
-<div class="container">
+<!-- KONTAKTNI PODATKI NA VRHU -->
+<section class="sekcija kontakt-fullvh">
+  <div class="container">
+    <div class="kontakt-info-modern">
+      <div class="kontakt-item">
+        <i class="fa-solid fa-building"></i>
+        <div>
+          <h4>Podjetje</h4>
+          <p>Lesni center Gojzd</p>
+        </div>
+      </div>
+      <div class="kontakt-item">
+        <i class="fa-solid fa-user"></i>
+        <div>
+          <h4>Kontaktna oseba</h4>
+          <p>Žan Brovč</p>
+        </div>
+      </div>
+      <div class="kontakt-item">
+        <i class="fa-solid fa-map-marker-alt"></i>
+        <div>
+          <h4>Naslov</h4>
+          <p>Gozd 15, 4294 Križe, Slovenija</p>
+        </div>
+      </div>
+      <div class="kontakt-item">
+        <i class="fa-solid fa-phone"></i>
+        <div>
+          <h4>Telefon</h4>
+          <p>040 161 496</p>
+        </div>
+      </div>
+      <div class="kontakt-item">
+        <i class="fa-solid fa-envelope"></i>
+        <div>
+          <h4>Email</h4>
+          <p>zan.brovc@gmail.com</p>
+        </div>
+      </div>
+      <div class="kontakt-item">
+        <i class="fa-solid fa-clock"></i>
+        <div>
+          <h4>Delovni čas</h4>
+          <p>Pon–Pet: 08:00–17:00</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-<h1>Kontakt</h1>
+<!-- KONTAKTNI OBRAZEC 100vh -->
+<section class="sekcija kontakt-fullvh" id="kontakt">
+  <div class="container">
+    <h2 class="naslov-sredina">Pošljite sporočilo</h2>
+    <form action="https://formspree.io/f/mgeqrobn" method="POST" class="kontakt-forma-modern">
+      <div class="form-grid-modern">
+        <input type="text" name="ime" placeholder="Vaše ime" required>
+        <input type="email" name="email" placeholder="Vaš e-mail" required>
+        <input type="text" name="telefon" placeholder="Telefon">
+        <input type="text" name="naslov" placeholder="Naslov">
+      </div>
+      <textarea name="sporocilo" rows="6" placeholder="Vaše sporočilo" required></textarea>
+      <!-- Gumb v obrazcu -->
+    <button type="submit" class="gumb-primarni">
+        <i class="fa-solid fa-paper-plane"></i> Pošlji sporočilo
+    </button>
+    </form>
+  </div>
+</section>
 
-<div class="kontakt">
+<!-- LOKACIJA -->
+<section class="sekcija siva">
+  <div class="container">
+    <h2 class="naslov-sredina">Naša lokacija</h2>
+    <div class="kontakt-lokacija">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2771.235698452088!2d14.745912315943888!3d46.204794579123295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476534e12d7d8f3f%3A0xabc1234567890!2sGozd%2015%2C%204294%20Kri%C5%BEe!5e0!3m2!1ssl!2ssi!4v1678623456789!5m2!1ssl!2ssi" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+</section>
 
-<p><i class="fa-solid fa-location-dot"></i> Škofja Loka</p>
-
-<p><i class="fa-solid fa-phone"></i> 000 000 000</p>
-
-<p><i class="fa-solid fa-envelope"></i> info@email.si</p>
-
-</div>
-
-<form>
-
-<input type="text" placeholder="Ime">
-
-<input type="email" placeholder="Email">
-
-<textarea placeholder="Sporočilo"></textarea>
-
-<button>Pošlji</button>
-
-</form>
-
-</div>
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <h3>Lesni center Gojzd</h3>
+      <p>Žan Brovč</p>
+      <p>Gozd 15</p>
+      <p>4294 Križe</p>
+    </div>
+    <div>
+      <h4>Navigacija</h4>
+      <a href="index.html">Domov</a>
+      <a href="onas.html">O nas</a>
+      <a href="izdelki.html">Izdelki</a>
+      <a href="kontakt.html">Kontakt</a>
+    </div>
+    <div>
+      <h4>Kontakt</h4>
+      <p><i class="fa-solid fa-phone"></i> 040 161 496</p>
+      <p><i class="fa-solid fa-envelope"></i> zan.brovc@gmail.com</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2026 Lesni center Gojzd</p>
+    <a href="#">Izdelava spletne strani</a>
+  </div>
+</footer>
 
 </body>
 </html>
