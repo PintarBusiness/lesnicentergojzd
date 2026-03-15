@@ -6,21 +6,29 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Izdelki</title>
+<title>Izdelki - Lesni center Gojzd</title>
 
 <link rel="stylesheet" href="slog.css">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
-<header>
-<div class="container navbar">
 
-<div class="logo">Lesni center Gojzd</div>
+<!-- HEADER -->
+
+<header class="glava">
+
+<div class="navigacija">
+
+<div class="logo">
+<img src="Images/logo.png" alt="Logo">
+</div>
 
 <nav>
 <a href="index.html">Domov</a>
@@ -29,39 +37,280 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 <a href="kontakt.html">Kontakt</a>
 </nav>
 
+<a class="kontakt-gumb" href="#">
+<i class="fa-solid fa-envelope"></i>
+Naroči izdelek
+</a>
+
 </div>
+
 </header>
 
-<div class="container">
 
-<h1>Naši izdelki</h1>
 
-<div class="grid">
 
-<div class="kartica">
-<img src="slike/izdelek1.jpg">
-<div class="kartica-content">
-<h3>Lesena miza</h3>
-</div>
+<!-- HERO + KATEGORIJE skupaj 100vh -->
+<section class="hero-kategorije">
+
+  <!-- HERO -->
+  <div class="hero-izdelki">
+    <div class="hero-overlay-izdelki"></div>
+    <div class="hero-vsebina-izdelki">
+      <h1>Naši izdelki</h1>
+      <p>Izdelujemo kakovostne lesene izdelke po meri za dom, vrt in vrtičkarje.</p>
+    </div>
+  </div>
+
+  <!-- KATEGORIJE -->
+  <div class="kategorije-wrapper">
+    <div class="container">
+      <div class="kategorije-ikone">
+
+        <a href="#dom" class="kategorija-ikona">
+          <i class="fa-solid fa-couch"></i>
+          <h3>Izdelki za dom</h3>
+          <p>Kakovostni leseni izdelki za notranje prostore.</p>
+        </a>
+
+        <a href="#vrt" class="kategorija-ikona">
+          <i class="fa-solid fa-tree"></i>
+          <h3>Izdelki za vrt</h3>
+          <p>Vrtno pohištvo in lesene konstrukcije za vrt.</p>
+        </a>
+
+        <a href="#vrtickarji" class="kategorija-ikona">
+          <i class="fa-solid fa-seedling"></i>
+          <h3>Izdelki za vrtičkarje</h3>
+          <p>Visoke grede, kompostniki in vrtni dodatki.</p>
+        </a>
+
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- IZDELKI ZA DOM -->
+<section class="sekcija siva" id="dom">
+  <div class="container">
+    <h2 class="naslov-sredina">Izdelki za dom</h2>
+    <div class="izdelki-grid">
+      <img src="Images/DOM/dom (1).jpg" alt="Izdelek za dom">
+      <img src="Images/DOM/dom (2).jpg" alt="Izdelek za dom">
+      <img src="Images/DOM/dom (3).jpg" alt="Izdelek za dom">
+      <img src="Images/DOM/dom (4).jpg" alt="Izdelek za dom">
+      <img src="Images/DOM/dom (5).jpg" alt="Izdelek za dom">
+      <img src="Images/DOM/dom (8).jpg" alt="Izdelek za dom">
+      <img src="Images/DOM/dom (9).jpg" alt="Izdelek za dom">
+      <img src="Images/DOM/dom (10).jpg" alt="Izdelek za dom">
+      <img src="Images/DOM/dom (11).jpg" alt="Izdelek za dom">
+      <img src="Images/DOM/dom (13).jpg" alt="Izdelek za dom">
+      <img src="Images/DOM/dom (16).jpg" alt="Izdelek za dom">
+      <img src="Images/DOM/dom (18).jpg" alt="Izdelek za dom">
+    </div>
+  </div>
+</section>
+
+<!-- IZDELKI ZA VRT -->
+<section class="sekcija" id="vrt">
+  <div class="container">
+    <h2 class="naslov-sredina">Izdelki za vrt</h2>
+    <div class="izdelki-grid">
+      <img src="Images/VRT/vrt (2).jpeg" alt="Izdelek za vrt">
+      <img src="Images/VRT/vrt (3).jpg" alt="Izdelek za vrt">
+      <img src="Images/VRT/vrt (4).jpg" alt="Izdelek za vrt">
+      <img src="Images/VRT/vrt (6).jpg" alt="Izdelek za vrt">
+      <img src="Images/VRT/vrt (7).jpg" alt="Izdelek za vrt">
+      <img src="Images/VRT/vrt (9).jpg" alt="Izdelek za vrt">
+      <img src="Images/VRT/vrt (10).jpg" alt="Izdelek za vrt">
+      <img src="Images/VRT/vrt (12).jpg" alt="Izdelek za vrt">
+      <img src="Images/VRT/vrt (13).jpg" alt="Izdelek za vrt">
+      <img src="Images/VRT/vrt (15).jpg" alt="Izdelek za vrt">
+      <img src="Images/VRT/vrt (16).jpg" alt="Izdelek za vrt">
+      <img src="Images/VRT/vrt (17).jpg" alt="Izdelek za vrt">
+      <img src="Images/VRT/vrt (20).jpg" alt="Izdelek za vrt">
+      <img src="Images/VRT/vrt (21).jpg" alt="Izdelek za vrt">
+      <img src="Images/VRT/vrt (22).jpg" alt="Izdelek za vrt">
+      <img src="Images/VRT/vrt (23).jpg" alt="Izdelek za vrt">
+      <img src="Images/VRT/vrt (25).jpg" alt="Izdelek za vrt">
+      <img src="Images/VRT/vrt (26).jpg" alt="Izdelek za vrt">
+      <img src="Images/VRT/vrt (28).jpg" alt="Izdelek za vrt">
+      <img src="Images/VRT/vrt (29).jpg" alt="Izdelek za vrt">
+    </div>
+  </div>
+</section>
+
+<!-- IZDELKI ZA VRTIČKARJE -->
+<section class="sekcija siva" id="vrtickarji">
+  <div class="container">
+    <h2 class="naslov-sredina">Izdelki za vrtičkarje</h2>
+    <div class="izdelki-grid">
+      <img src="Images/VRTICKARJI/vrtickarji (2).jpg" alt="Izdelek za vrtičkarje">
+      <img src="Images/VRTICKARJI/vrtickarji (3).jpg" alt="Izdelek za vrtičkarje">
+      <img src="Images/VRTICKARJI/vrtickarji (4).jpg" alt="Izdelek za vrtičkarje">
+      <img src="Images/VRTICKARJI/vrtickarji (5).jpg" alt="Izdelek za vrtičkarje">
+      <img src="Images/VRTICKARJI/vrtickarji (6).jpg" alt="Izdelek za vrtičkarje">
+      <img src="Images/VRTICKARJI/vrtickarji (7).jpg" alt="Izdelek za vrtičkarje">
+      <img src="Images/VRTICKARJI/vrtickarji (8).jpg" alt="Izdelek za vrtičkarje">
+      <img src="Images/VRTICKARJI/vrtickarji (9).jpg" alt="Izdelek za vrtičkarje">
+      <img src="Images/VRTICKARJI/vrtickarji (10).jpg" alt="Izdelek za vrtičkarje">
+      <img src="Images/VRTICKARJI/vrtickarji (12).jpg" alt="Izdelek za vrtičkarje">
+      <img src="Images/VRTICKARJI/vrtickarji (13).jpg" alt="Izdelek za vrtičkarje">
+      <img src="Images/VRTICKARJI/vrtickarji (14).jpg" alt="Izdelek za vrtičkarje">
+      <img src="Images/VRTICKARJI/vrtickarji (15).jpg" alt="Izdelek za vrtičkarje">
+      <img src="Images/VRTICKARJI/vrtickarji (16).jpg" alt="Izdelek za vrtičkarje">
+      <img src="Images/VRTICKARJI/vrtickarji (17).jpg" alt="Izdelek za vrtičkarje">
+      <img src="Images/VRTICKARJI/vrtickarji (18).jpg" alt="Izdelek za vrtičkarje">
+      <img src="Images/VRTICKARJI/vrtickarji (19).jpg" alt="Izdelek za vrtičkarje">
+      <img src="Images/VRTICKARJI/vrtickarji (20).jpg" alt="Izdelek za vrtičkarje">
+      <img src="Images/VRTICKARJI/vrtickarji (21).jpg" alt="Izdelek za vrtičkarje">
+      <img src="Images/VRTICKARJI/vrtickarji (22).jpg" alt="Izdelek za vrtičkarje">
+      <img src="Images/VRTICKARJI/vrtickarji (23).jpg" alt="Izdelek za vrtičkarje">
+      <img src="Images/VRTICKARJI/vrtickarji (24).jpg" alt="Izdelek za vrtičkarje">
+      <img src="Images/VRTICKARJI/vrtickarji (25).jpg" alt="Izdelek za vrtičkarje">
+      <img src="Images/VRTICKARJI/vrtickarji (1).jpeg" alt="Izdelek za vrtičkarje">
+    </div>
+  </div>
+</section>
+
+<!-- MODAL ZA OGLED SLIKE Z PUŠČICAMI -->
+<div id="slika-modal" class="modal">
+  <span class="modal-close">&times;</span>
+  <img class="modal-content" id="slika-modal-img">
+  <div id="modal-caption"></div>
+  
+  <!-- Navigacija -->
+  <span class="modal-prev">&#10094;</span>
+  <span class="modal-next">&#10095;</span>
 </div>
 
-<div class="kartica">
-<img src="slike/izdelek2.jpg">
-<div class="kartica-content">
-<h3>Lesena ograja</h3>
-</div>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const modal = document.getElementById("slika-modal");
+  const modalImg = document.getElementById("slika-modal-img");
+  const captionText = document.getElementById("modal-caption");
+  const closeBtn = document.querySelector(".modal-close");
+  const prevBtn = document.querySelector(".modal-prev");
+  const nextBtn = document.querySelector(".modal-next");
+
+  const images = Array.from(document.querySelectorAll(".izdelki-grid img"));
+  let currentIndex = 0;
+
+  function showModal(index) {
+    currentIndex = index;
+    modal.style.display = "block";
+    modalImg.src = images[currentIndex].src;
+    captionText.innerHTML = images[currentIndex].alt;
+  }
+
+  function showNext() {
+    currentIndex = (currentIndex + 1) % images.length;
+    modalImg.src = images[currentIndex].src;
+    captionText.innerHTML = images[currentIndex].alt;
+  }
+
+  function showPrev() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    modalImg.src = images[currentIndex].src;
+    captionText.innerHTML = images[currentIndex].alt;
+  }
+
+  // Odpri modal ob kliku na sliko
+  images.forEach((img, index) => {
+    img.addEventListener("click", () => showModal(index));
+  });
+
+  // Zapri modal
+  closeBtn.addEventListener("click", () => modal.style.display = "none");
+
+  // Klik zunaj slike zapre modal
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) modal.style.display = "none";
+  });
+
+  // Navigacija
+  nextBtn.addEventListener("click", (e) => {
+    e.stopPropagation(); // prepreči zapiranje modal ob kliku
+    showNext();
+  });
+  prevBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    showPrev();
+  });
+
+  // Navigacija s tipkami
+  document.addEventListener("keydown", (e) => {
+    if (modal.style.display === "block") {
+      if (e.key === "ArrowRight") showNext();
+      if (e.key === "ArrowLeft") showPrev();
+      if (e.key === "Escape") modal.style.display = "none";
+    }
+  });
+});
+</script>
+
+
+<!-- CTA -->
+
+<section class="ctaizdelki">
+
+<div class="cta-vsebina">
+
+<h2>Želite izdelek po meri?</h2>
+
+<p>
+Kontaktirajte nas in izdelali bomo rešitev po vaših željah.
+</p>
+
+<a class="gumb-primarni" href="#">
+<i class="fa-solid fa-envelope"></i>
+Pošlji povpraševanje
+</a>
+
 </div>
 
-<div class="kartica">
-<img src="slike/izdelek3.jpg">
-<div class="kartica-content">
-<h3>Lesena terasa</h3>
+</section>
+
+
+
+<!-- FOOTER -->
+
+<footer class="footer">
+
+<div class="footer-grid">
+
+<div>
+<h3>Lesni center Gojzd</h3>
+<p>Žan Brovč</p>
+<p>Gozd 15</p>
+<p>4294 Križe</p>
 </div>
+
+<div>
+<h4>Navigacija</h4>
+<a href="index.html">Domov</a>
+<a href="onas.html">O nas</a>
+<a href="izdelki.html">Izdelki</a>
+<a href="kontakt.html">Kontakt</a>
+</div>
+
+<div>
+<h4>Kontakt</h4>
+<p><i class="fa-solid fa-phone"></i> 040 161 496</p>
+<p><i class="fa-solid fa-envelope"></i> zan.brovc@gmail.com</p>
 </div>
 
 </div>
 
+<div class="footer-bottom">
+
+<p>© 2026 Lesni center Gojzd</p>
+<a href="#">Izdelava spletne strani</a>
+
 </div>
+
+</footer>
 
 </body>
 </html>
