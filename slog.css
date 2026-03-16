@@ -1049,3 +1049,90 @@ box-shadow:0 1em 2em rgba(0,0,0,0.18);
         display: none;
     }
 }
+
+/* =========================
+   ONAS.HTML MOBILE FIX
+========================= */
+
+@media (max-width: 768px) {
+
+    /* odstranimo 100vh ker na telefonu dela težave */
+    .zgodba-statistika{
+        height: auto;
+    }
+
+    /* ZGODBA */
+    .zgodba-grid{
+        flex-direction: column;
+        gap: 2em;
+        margin-top: 3em;
+        padding: 5em 0em;
+        
+    }
+
+    .zgodba-item{
+        flex: none;
+        width: 100%;
+        margin-top: 0;
+    }
+
+    .zgodba-item img.slika-onas{
+        height: 16em;
+    }
+
+    .zgodba-item.tekst h2{
+        font-size: 2em;
+    }
+
+    .zgodba-item.tekst p{
+        font-size: 1em;
+        line-height: 1.6em;
+    }
+
+    /* STATISTIKA */
+    .statistika{
+        padding: 2.5em 1.5em;
+    }
+
+    .statistika-grid{
+        grid-template-columns: repeat(2,1fr);
+        gap: 1.5em;
+    }
+
+    .stat h3{
+        font-size: 2em;
+    }
+
+    .stat p{
+        font-size: 0.95em;
+    }
+
+    /* VREDNOTE */
+    .grid-storitve{
+        grid-template-columns: 1fr;
+        gap: 1.8em;
+    }
+
+    .kartica{
+        padding: 1.6em;
+    }
+
+    /* PROCES DELA */
+    .proces-grid{
+        grid-template-columns: repeat(2,1fr);
+        gap: 1.5em;
+    }
+
+    .proces span{
+        font-size: 1.8em;
+    }
+
+    .proces h3{
+        font-size: 1.1em;
+    }
+
+    .proces p{
+        font-size: 0.95em;
+    }
+
+}

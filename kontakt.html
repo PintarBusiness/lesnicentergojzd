@@ -14,22 +14,46 @@
 <body>
 
 <header class="glava">
-  <div class="navigacija">
-    <div class="logo">
-      <img src="Images/logo.png" alt="Logo">
+    <div class="navigacija">
+        <div class="logo">
+            <img src="Images/logo.png" alt="Logo">
+        </div>
+
+        <!-- Hamburger za mobilni meni -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Nav meni za mobilne naprave -->
+        <nav id="nav-menu">
+            <a href="#">Domov</a>
+            <a href="onas.html">O nas</a>
+            <a href="izdelki.html">Izdelki</a>
+            <a href="kontakt.html">Kontakt</a>
+            <a class="kontakt-gumb" href="kontakt.html#kontakt">
+                <i class="fa-solid fa-envelope"></i> Naroči izdelek
+            </a>
+        </nav>
+
+        <!-- Desktop gumb, ostane za večje zaslone -->
+        <a class="kontakt-gumb desktop-gumb" href="kontakt.html#kontakt">
+            <i class="fa-solid fa-envelope"></i> Naroči izdelek
+        </a>
     </div>
-    <nav>
-      <a href="index.html">Domov</a>
-      <a href="onas.html">O nas</a>
-      <a href="izdelki.html">Izdelki</a>
-      <a href="kontakt.html">Kontakt</a>
-    </nav>
-    <a class="kontakt-gumb" href="kontakt.html#kontakt">
-      <i class="fa-solid fa-envelope"></i>
-      Naroči izdelek
-    </a>
-  </div>
 </header>
+
+<!-- JS za hamburger -->
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        hamburger.classList.toggle('open');
+    });
+</script>
 
 <!-- KONTAKTNI PODATKI NA VRHU -->
 <section class="sekcija kontakt-fullvh">
