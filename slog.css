@@ -787,42 +787,77 @@ box-shadow:0 1em 2em rgba(0,0,0,0.18);
 
 /* Footer css*/
 
+/* MODERN FOOTER CSS */
+
 .footer {
     background: var(--barva-temna);
-    color: white;
-    padding: 3.75em 1.25em; /* 60px 20px */
+    color: var(--barva-svetla);
+    padding: 4em 1.25em;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 .footer-grid {
     max-width: var(--max-sirina);
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(13.75em,1fr)); /* 220px */
-    gap: 2.5em; /* 40px */
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 2.5em;
+}
+
+.footer h3, .footer h4 {
+    color: var(--barva-svetla);
+    font-family: 'Playfair Display', serif;
+}
+
+.footer h4 {
+    margin-bottom: 1em;
+    font-size: 1.2em;
 }
 
 .footer a {
     display: block;
     color: #ccc;
-    margin-top: 0.5em; /* 8px */
+    margin-top: 0.5em;
     text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: var(--barva-hover);
+}
+
+.footer p {
+    margin: 0.5em 0;
+    font-size: 1em;
 }
 
 .footer-bottom {
-    margin-top: 2em;
-    max-width: 80%;
-    margin-right: auto;
-    margin-left: auto;
+    max-width: var(--max-sirina);
+    margin: 2em auto 0 auto;
     display: flex;
-    text-align: center;
+    flex-direction: column;  /* mobilna verzija: ena pod drugo */
     justify-content: center;
     align-items: center;
-    gap: 2em;
-    border-top: 0.1em white solid;
+    gap: 0.5em;
+    border-top: 0.05em solid #fff;
+    padding-top: 1em;
+    text-align: center;
 }
 
-.footer-bottom a, .footer-bottom p
-{
-    margin-top: 0.5em;
-    color: white;
+.footer-bottom a, .footer-bottom p {
+    color: var(--barva-svetla);
+    text-decoration: none;
+    margin: 0;           /* odstranimo privzete margine */
+    line-height: 1.2em;  /* bolj enakomerno vertikalno poravnano */
+}
+
+@media (min-width: 768px) {
+    .footer-bottom {
+        flex-direction: row;       /* horizontalno za večje zaslone */
+        justify-content: center;   /* oba elementa centrirana skupaj */
+        align-items: center;       /* vertikalno centrirano */
+        gap: 5em;                  /* razmik med © in linkom */
+        text-align: center;        /* centrirano */
+    }
 }

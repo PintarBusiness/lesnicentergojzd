@@ -1,44 +1,47 @@
 <?php
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
-require 'PHPMailer/src/Exception.php';
-require 'PHPMailer/src/PHPMailer.php';
-require 'PHPMailer/src/SMTP.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
     $ime = htmlspecialchars($_POST['ime']);
     $email = htmlspecialchars($_POST['email']);
     $telefon = htmlspecialchars($_POST['telefon']);
     $naslov = htmlspecialchars($_POST['naslov']);
     $sporocilo = htmlspecialchars($_POST['sporocilo']);
 
-    $mail = new PHPMailer(true);
+    $to = "jure.pintar9@gmail.com";
+    $subject = "Novo sporočilo s spletne strani";
 
-    try {
-        // SMTP nastavitve
-        $mail->isSMTP();
-        $mail->Host = 'smtp.gmail.com';
-        $mail->SMTPAuth = true;
-        $mail->Username = 'tvoj.gmail@gmail.com'; // Gmail
-        $mail->Password = 'APLIKACIJSKO_GMAIL_PASSWORD'; // ne tvoj običajni password, ampak app password
-        $mail->SMTPSecure = 'tls';
-        $mail->Port = 587;
+    $message = "
+Ime: $ime
 
-        // Prejemnik in pošiljatelj
-        $mail->setFrom($email, $ime);
-        $mail->addAddress('jure.pintar9@gmail.com', 'Jure Pintar');
+Email: $email
 
-        $mail->Subject = 'Novo sporočilo s spletne strani';
-        $mail->Body = "Ime: $ime\nE-mail: $email\nTelefon: $telefon\nNaslov: $naslov\n\nSporočilo:\n$sporocilo";
+Telefon: $telefon
 
-        $mail->send();
-        echo "<script>alert('Vaše sporočilo je bilo poslano. Hvala!'); window.location.href='kontakt.html';</script>";
-    } catch (Exception $e) {
-        echo "<script>alert('Prišlo je do napake: {$mail->ErrorInfo}'); window.location.href='kontakt.html';</script>";
+Naslov: $naslov
+
+---------------------
+
+Sporočilo:
+
+$sporocilo
+";
+
+    $headers = "From: no-reply@tvojadomena.si\r\n";
+    $headers .= "Reply-To: $email\r\n";
+
+    if(mail($to, $subject, $message, $headers)){
+        echo "<script>
+        alert('Sporočilo poslano.');
+        window.location.href='kontakt.html';
+        </script>";
+    } else {
+        echo "<script>
+        alert('Napaka pri pošiljanju.');
+        window.location.href='kontakt.html';
+        </script>";
     }
-} else {
-    header("Location: kontakt.html");
-    exit();
+
 }
+
 ?>
