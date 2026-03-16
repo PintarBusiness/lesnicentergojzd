@@ -861,3 +861,191 @@ box-shadow:0 1em 2em rgba(0,0,0,0.18);
         text-align: center;        /* centrirano */
     }
 }
+
+/* CSS za header footer in index*/
+/* =========================
+   MOBILE ONLY CSS
+========================= */
+.hamburger, #nav-menu .kontakt-gumb
+{
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    .hamburger {
+    display: block;
+    width: 30px;
+    height: 22px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1100;
+    }
+
+    .hamburger span {
+        position: absolute;
+        height: 3px;
+        width: 100%;
+        background: var(--barva-temna);
+        left: 0;
+        transition: all 0.4s ease;
+        border-radius: 2px;
+    }
+
+    /* 3 črtice hamburgerja */
+    .hamburger span:nth-child(1) {
+        top: 0;
+    }
+
+    .hamburger span:nth-child(2) {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .hamburger span:nth-child(3) {
+        bottom: 0;
+    }
+
+    /* Ob kliku: navaden simetričen X */
+    .hamburger.open span:nth-child(1) {
+        transform: rotate(45deg);
+        top: 50%;
+    }
+
+    .hamburger.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+        transform: rotate(-45deg);
+        top: 50%;
+    }
+        /* Mobilni menu, skrit dokler ne klikne hamburger */
+        #nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%; /* zavzame celo širino */
+        background: var(--barva-svetla); /* belo ozadje */
+        flex-direction: column;
+        gap: 1em;
+        padding: 1em 0; /* vrh/dno padding, stranice brez paddinga */
+        border-radius: 0; /* brez zaobljenih robov */
+        box-shadow: none; /* odstrani senco */
+        z-index: 999;
+        text-align: center; /* centriraj vse linke */
+        border-top: 0.1em solid black;
+    }
+
+    #nav-menu a {
+        padding: 0.75em 1em;
+        color: var(--barva-temna);
+        font-weight: 700;
+        font-size: 1.2em; /* nekoliko manjši, da ni preveliko */
+        text-decoration: none;
+        transition: all 0.3s;
+    }
+
+    #nav-menu a:hover {
+        color: var(--barva-hover);
+    }
+
+    #nav-menu.active {
+        display: flex;
+    }
+
+    /* Gumb znotraj mobilnega menija */
+    #nav-menu .kontakt-gumb {
+        background: var(--barva-primarna);
+        display: block;
+        color: white;
+        text-align: center;
+        margin: 0.5em auto; /* centriran, omejena širina */
+        width: 70%; 
+        max-width: 200px;
+        border-radius: 1.5em;
+        padding: 0.7em 1em;
+        font-size: 1em;
+    }
+
+    #nav-menu .kontakt-gumb:hover {
+        background-color: var(--barva-hover);
+    }
+
+    /* Hero adjustments for mobile */
+    .hero-vsebina h1 {
+        font-size: 2.8em; /* malo večji, a ne preveč */
+        line-height: 1.2em;
+        
+    }
+
+    .hero-opis {
+        font-size: 1.1em;
+        
+    }
+
+    .hero-podnaslov {
+        font-size: 1.05em;
+        
+    }
+
+    .hero-gumbi {
+        flex-direction: column;
+        gap: 0.75em;
+        
+    }
+
+    .gumb-primarni, .gumb-sekundarni {
+        width: 70%;
+        max-width: 220px;
+        text-align: center;
+        padding: 0.75em 1em;
+        font-size: 1.05em;
+    }
+
+    /* Ostale mobile prilagoditve */
+    .mnenja-grid {
+        grid-template-columns: 1fr;
+        gap: 2em;
+    }
+
+    .grid-storitve {
+        grid-template-columns: 1fr;
+        gap: 2em;
+    }
+
+    .cta p {
+        font-size: 1em;
+        text-align: center;
+    }
+
+    .footer-grid {
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5em;
+        text-align: center;
+        padding-top: 1em;
+    }
+
+    .footer-bottom p, .footer-bottom a {
+        margin: 0;
+        line-height: 1.2em;
+    }
+
+    .logo img {
+        width: 6em;
+    }
+
+    /* Skrij desktop nav */
+    nav:not(#nav-menu),
+    .desktop-gumb {
+        display: none;
+    }
+}
