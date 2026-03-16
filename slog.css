@@ -1276,3 +1276,41 @@ font-size:1.8em;
 }
 
 }
+
+/* =========================
+   POGOJI POSLOVANJA
+========================= */
+.pogoji-sekcija{
+    padding-top: 5em;
+    padding-bottom: 3em;
+}
+
+.pogoji-container{
+    max-width:80%;
+    margin:auto;
+}
+
+.pogoji-container h1{
+    margin-bottom:2em;
+}
+
+.pogoji-container h2{
+    margin-top:3em;
+    margin-bottom:1em;
+    font-family: 'Playfair Display', serif;
+}
+
+.pogoji-container p{
+    margin-bottom:1em;
+    line-height:1.7;
+}
+
+.pogoji-container ol{
+    padding-left:1.4em;
+    margin-bottom:1.8em;
+}
+
+.pogoji-container li{
+    margin-bottom:0.7em;
+    line-height:1.6;
+}
