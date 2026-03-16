@@ -998,13 +998,17 @@ box-shadow:0 1em 2em rgba(0,0,0,0.18);
 
     .hero-podnaslov {
         font-size: 1.05em;
-        
+        margin-top: -3em;
     }
 
     .hero-gumbi {
         flex-direction: column;
         gap: 0.75em;
         
+    }
+    .gumb-primarni
+    {
+        margin-top: -2em;
     }
 
     .gumb-primarni, .gumb-sekundarni {
