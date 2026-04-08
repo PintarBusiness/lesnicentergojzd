@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    $to = "info@pintsite.si";
+    $to = "zan.brovc@gmail.com";
     $subject = "Povpraševanje - Lensicenter Gojzd";
 
     $message = "Ime: $ime\r\n\r\n";
