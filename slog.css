@@ -48,6 +48,8 @@ body {
 
 .logo img {
     width: 8em;
+    padding-bottom: 1em;
+    padding-top: 1em;
 }
 
 nav a {
